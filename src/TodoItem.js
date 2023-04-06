@@ -28,7 +28,7 @@ function TodoItem({todo, onRemove, onEdit}){
             });
             setIsEditing(false);
         }
-        //키 입력했을 때 호출해서 수정상태 원복
+        //키 입력했을 때 호출해서 수정모드 빠져나오기 
         const handleExit = () => {
             setIsEditing(false);
         }
