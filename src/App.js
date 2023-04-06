@@ -51,7 +51,7 @@ function App() {
             style={{backgroundColor:"#218380", textAlign:"left", width:"400px", height:"auto", minHeight:"450px", borderRadius:"20px", justifyContent:"center", margin:"auto"}}>
               <div style={{width:"380px", height:"auto",justifyContent:"center", margin:"auto", fontSize:"30px"}}>             
                   {todos.map(todo => (
-                  <TodoItem key={todo.id} todo={todo} onRemove={onRemove} onEdit={handleEdit} />
+                  <TodoItem key={todo.id} todo={todo} onRemove={onRemove} onEdit={handleEdit}/>
                   ))}                
               </div>
           </div>

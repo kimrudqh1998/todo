@@ -32,7 +32,7 @@ function TodoItem({todo, onRemove, onEdit}){
         const handleExit = () => {
             setIsEditing(false);
         }
-        //수정값 저장
+        //수정값 반영
         const handleInputChange = (event) => {
             setContent(event.target.value);
         }
@@ -46,12 +46,13 @@ function TodoItem({todo, onRemove, onEdit}){
         return (
             <div className="todo-item" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                 <div className="todo-item-content" style={{display:"flex", alignItems:"center"}}>
-                    <input type="checkbox" checked={status} onChange={handleToggle}/>{content}
+                    <input type="checkbox" style={{backgroundColor:"transparent",border:"none",cursor:"pointer",fontSize:"24px",height:"32px",width:"32px", padding:"0px"}}
+                    checked={status} onChange={handleToggle} placeholder="할 일 입력"/>
+                    <span style={{textDecoration: status ? "line-through" : "none", color : status ? "gray" : "black"}}>{content}</span>
                 </div>
                 {isEditing ? (
                     <>
                     <input value={content} onChange={handleInputChange} onKeyDown={handleKeyDown}/>
-                    <button onClick={handleSave}>저장</button>
                     </>
                 ):(
                 <div className="todo-item-buttons" style={{display:"flex", gap:"8px"}}>
