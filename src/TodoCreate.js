@@ -32,11 +32,8 @@ function TodoCreate({onCreate}){
   //input 상자 및 저장 버튼 리턴
   return (
     <div>
-      <input className="input" type="text" value={name} onChange={handleChange} onKeyDown={handleKeyDown} />
-      <button 
-      style={{backgroundColor:"transparent", border:"none",cursor:"pointer", fontSize:"24px", height:"32px", width:"32px", padding:"0"}} 
-      onClick={handleClick} disabled={!name}>
-        <FontAwesomeIcon icon={faCheck}/></button>
+      <input className="input" style={{height:"24px", fontSize:"20px", alignContent:"center"}} type="text" value={name} onChange={handleChange} onKeyDown={handleKeyDown} placeholder="할 일 입력" />
+    
     </div>
   );
 }

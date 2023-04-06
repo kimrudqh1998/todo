@@ -9,19 +9,13 @@ function App() {
   //State 훅
   const [todos, setTodos] = useState([])
   const [nextId, setNextId] = useState(0);
-  const [compTodos, setCompTodos] = useState(0);
 
   //배열 생성
   const handleCreate = (newTodo) => {
       newTodo.id = nextId;
       setNextId(nextId + 1);
       setTodos([...todos,newTodo]);
-      if(newTodo.status){
-        setCompTodos(compTodos+1);
-      }
   };
- //현재 생성된 총 할 일의 갯수
-  const todoCount = todos.length;
 
   //배열 삭제를 위한 필터
   const onRemove = (id) => {
@@ -50,7 +44,6 @@ function App() {
         </p>
         </header>
         <body>
-          <p><b>남은 할 일:{todoCount}</b></p>
           <div className="centerbox"
           /*맵을 이용해서 배열 출력, 각 버튼에 맞는 함수 지정 */ 
             style={{backgroundColor:"#218380", textAlign:"left", width:"400px", height:"auto", minHeight:"450px", borderRadius:"20px", justifyContent:"center", margin:"auto"}}>
