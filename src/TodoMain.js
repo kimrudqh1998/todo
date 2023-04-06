@@ -21,7 +21,7 @@ class TodoMain extends React.Component{
         date: new Date()
       });
     }
-  
+  //타이머 렌더링
     render() {   
         return (
             <div>
