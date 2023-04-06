@@ -1,6 +1,8 @@
 import React from "react";
 
 class TodoMain extends React.Component{
+
+    //실시간 시간 표시
     constructor(props) {
         super(props);
         this.state = {date: new Date()};

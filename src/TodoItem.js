@@ -50,7 +50,7 @@ function TodoItem({todo, onRemove, onEdit}){
                     checked={status} onChange={handleToggle} placeholder="할 일 입력"/>
                     <span style={{textDecoration: status ? "line-through" : "none", color : status ? "gray" : "black"}}>{content}</span>
                 </div>
-                {isEditing ? (
+                {isEditing ? ( //수정 버튼을 눌렀을 때 입력창을 나타나게 함
                     <>
                     <input value={content} onChange={handleInputChange} onKeyDown={handleKeyDown}/>
                     </>
