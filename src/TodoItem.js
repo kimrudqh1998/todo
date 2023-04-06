@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faTrash, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 function TodoItem({todo, onRemove, onEdit}){
@@ -27,11 +27,7 @@ function TodoItem({todo, onRemove, onEdit}){
                 name: content
             });
             setIsEditing(false);
-        }
-        //키 입력했을 때 호출해서 수정모드 빠져나오기 
-        const handleExit = () => {
-            setIsEditing(false);
-        }
+        }    
         //수정값 반영
         const handleInputChange = (event) => {
             setContent(event.target.value);
