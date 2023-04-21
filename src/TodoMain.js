@@ -1,5 +1,5 @@
 import React from "react";
-
+//클래스방식도 있어서 클래스방식으로 한번 해봄.
 class TodoMain extends React.Component{
 
     //실시간 시간 표시
