@@ -24,7 +24,7 @@ function App() {
 
   //수정 반영
   const handleEdit = (id, newName) => {
-    const updatedTodos = todos.map((todo) =>
+    const updatedTodos = todos.map((todo) =>                                                
       todo.id === id ? { ...todo, name: newName } : todo
     );
     setTodos(updatedTodos);
